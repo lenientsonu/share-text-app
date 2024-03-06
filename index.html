@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Any Text Share</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="container1">
+    <h1>Any Text Share</h1>
+    <!-- Add create new text button and show it only if there is no text -->
+    <button type="submit" value="Create" onclick="createNew()" id="create" >Create New</button>
+    <h2>Share your text with anyone</h2></div>
+    <!-- Use id and password to save the text -->
+    <div class="container" id="container">
+    <input type="password" name="password" placeholder="Enter a password (Remember It)" id="password" required>
+    <textarea name="text" cols="30" rows="10" placeholder="Enter the text that you want to save" id="text" required></textarea>
+    <button type="submit" value="Save" onclick="saveText()">Save</button>
+    <!-- Show the link to share -->
+    <p id="link"></p>
+    
+    </div>
+    <!-- Add message text area -->
+    <div class="container" id="container2">
+    <textarea name="message" id="message" cols="30" rows="10" placeholder="Message">Loading....................</textarea>
+    <button type="submit" value="Save" onclick="savechanges()" id="savechanges">Save</button>
+    <!-- Add share button -->
+    <button type="submit" value="Share" onclick="shareshare()" id="share">Share</button>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase.js"></script>
+<script src="script.js"></script>
+</html>
